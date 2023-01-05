@@ -21,12 +21,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println(LoginActivity.access);
-                EditText editTextUser = findViewById(R.id.editTextUser);
+                EditText editTextUsername = findViewById(R.id.editTextUser);
                 EditText editTextPassword = findViewById(R.id.editTextPassword);
-                String user = editTextUser.getText().toString();
+                String user = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
                 if (user.compareTo("TPandINFO") == 0 && password.compareTo("secret") == 0){
-                    LoginActivity.access = 1;
+                    access = 1;
                 }
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
             }
